@@ -46,7 +46,7 @@ Function Get-Pingstatus
         
                 [PSCustomObject]@{
 
-                    #why is the 2nd foreach loop required here?
+                    #why is the 2nd foreach loop required here? - Look at this.
                     DeviceName = $_.Values | foreach { "$_" }
                     Online     = $_.Keys | where {$_ -eq "Online"}
                     Offline    = $_.Keys | where {$_ -eq "Offline"}
